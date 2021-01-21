@@ -12,20 +12,20 @@
         <div class="card" id="telalogin">
             <!-- <img src="..." class="card-img-top" alt="..."> -->
             <div class="card-body">
-                <form method="POST" action="localhost:5000/login">
+                <form method="POST" action="http://localhost:5000/login">
                     <div class="mb-3">
                       <label  class="form-label">User</label>
-                      <input type="text" class="form-control" id="user"> 
+                      <input type="text" name="User" class="form-control" id="user"> 
                     </div>
                     <div class="mb-3">
                       <label class="form-label">Password</label>
-                      <input type="password" class="form-control" id="exampleInputPassword1">
+                      <input type="password" name="Password" class="form-control" id="password">
                     </div>
                     <div class="mb-3 form-check">
                       <input type="checkbox" class="form-check-input" id="exampleCheck1">
                       <label class="form-check-label" for="exampleCheck1">Remember me</label>
                     </div>
-                    <button type="submit" class="btn btn-primary btn-block btn-dark">Submit</button>
+                    <button type="submit" value="Login" class="btn btn-primary btn-block btn-dark">Submit</button>
                   </form>
             </div>
           </div>

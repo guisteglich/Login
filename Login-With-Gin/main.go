@@ -1,13 +1,14 @@
 package main
 
 import (
+	"fmt"
 	"net/http"
 
 	"github.com/gin-gonic/gin"
 )
 
 type Login struct {
-	Login    string `json: "login`
+	User     string `json: "user`
 	Password string `json: "password`
 }
 
@@ -34,10 +35,15 @@ func loginHandler(c *gin.Context) {
 		return
 	}
 
-	if form.user != "guilherme" || form.Password != "123" {
+	// userValue := c.PostForm("User")
+	// passwordValue := c.PostForm("Password")
+
+	fmt.Println("dados do form:", form)
+
+	if form.User != "guilherme" || form.Password != "123" {
 		c.JSON(http.StatusUnauthorized, gin.H{"status": "unauthorized"})
 		return
 	}
 
-	c.Redirect(http.StatusOK, "/")
+	c.Redirect(http.StatusFound, "/")
 }
